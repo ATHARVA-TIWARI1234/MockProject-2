@@ -80,16 +80,16 @@ df['keyword_overlap'] = df.apply(lambda x: keyword_overlap(x['resume_norm'], x['
 
 We experimented with multiple ML/DL models.
 
-| Rank | Model                                        | Accuracy   | Precision | Recall | F1-score   |
-| ---- | -------------------------------------------- | ---------- | --------- | ------ | ---------- |
-| 🥇 1 | **SBERT + ANN + Extra Features (5 epochs)**  | **95.11%** | 91.69%    | 99.20% | **95.30%** |
-| 🥈 2 | **BGE-small + Transformer + Extra Features** | 94.88%     | 91.31%    | 99.20% | 95.09%     |
-| 🥉 3 | **SBERT + ANN + Extra Features (2 epochs)**  | 93.75%     | 89.79%    | 98.72% | 94.04%     |
-| 4    | **BGE-base + Transformer + Extra Features**  | 93.59%     | 89.78%    | 98.38% | 93.88%     |
-| 5    | **SBERT + Transformer + Extra Features**     | 92.57%     | 88.29%    | 98.17% | 92.97%     |
-| 6    | **PyTorch ANN**                              | 90.30%     | 89.37%    | 91.49% | 90.42%     |
-| 7    | **SVM**                                      | 90.20%     | 90.97%    | 89.25% | 90.11%     |
-| 8    | **Logistic Regression**                      | 89.97%     | 91.52%    | 88.11% | 89.78%     |
+| Rank | Model                                        | Saved As                               | Accuracy   | Precision | Recall | F1-score   |
+| ---- | -------------------------------------------- | -------------------------------------- | ---------- | --------- | ------ | ---------- |
+| 🥇 1 | **SBERT + ANN + Extra Features (5 epochs)**  | `model_sbert_ann_extra_5epoch.pt`      | **95.11%** | 91.69%    | 99.20% | **95.30%** |
+| 🥈 2 | **BGE-small + Transformer + Extra Features** | `model_bge_transformer_extra_mps.pt`   | 94.88%     | 91.31%    | 99.20% | 95.09%     |
+| 🥉 3 | **SBERT + ANN + Extra Features (2 epochs)**  | `model_sbert_ann_extra_2epoch.pt`      | 93.75%     | 89.79%    | 98.72% | 94.04%     |
+| 4    | **BGE-base + Transformer + Extra Features**  | `model_bge_transformer_mps.pt`         | 93.59%     | 89.78%    | 98.38% | 93.88%     |
+| 5    | **SBERT + Transformer + Extra Features**     | `model_sbert_transformer_extra_mps.pt` | 92.57%     | 88.29%    | 98.17% | 92.97%     |
+| 6    | **PyTorch ANN**                              | `model_ann.pt`                         | 90.30%     | 89.37%    | 91.49% | 90.42%     |
+| 7    | **SVM**                                      | `model_svm.pkl`                        | 90.20%     | 90.97%    | 89.25% | 90.11%     |
+| 8    | **Logistic Regression**                      | `model_lr.pkl`                         | 89.97%     | 91.52%    | 88.11% | 89.78%     |
 
 **Best Model → SBERT + ANN + Extra Features (5 epochs)** ✅
 
